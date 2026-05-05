@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><header class="indexHeader">
+    MY COLLEGE DIARY  
+  </header>
+     <link rel="stylesheet" href="style.css">
+     <body>
+       <button><a href="index.html">HOME </button></a>
+       <button><a href="contact.html">CONTACT </button></a>
+       <button><a href="gallery.html">GALLERY </button></a>
+       <button><a href="diary.html">DIARY </button></a>
+         <section class="about">
+  <section class="about">
+      <H1 class="about-layout">ABOUT</H1>
+    <div><h3 class="about-layout">I am an IT student passionate about building websites and systems.
+        I enjoy both front-end design and back-end logic, and I’m continuously
+        improving my skills in different technologies.</h3></div>
+        
+    <H2 class="textSkill">FAVORITE SONG</H2>
+<audio id="myAudio">
+  <source src="Daniel Caesar - Love Me Like I Love You [UNRELEASED].mp3" type="audio/mpeg">
+</audio>
+
+<div class="audio-container">
+  <img src="play-button.png" id="audioIcon">
+
+  <!-- sound wave -->
+  <div id="wave" class="wave">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<div id="songTitle"><h2>Love me like i love you - Daniel Cesar</h2> </div>
+
+  <div class="skill-block">
+       <div> <h2 class="textSkill">-SKILLS- </h2></div>
+    <h4>Front-end</h4>
+    <div class="icon-row">
+      <img src="html-5.png" alt="HTML">
+      <img src="CSS.png" alt="CSS">
+      <img src="java-script.png" alt="JavaScript">
+    </div>
+  </div>
+
+  <div class="skill-block">
+    <h4>Back-end</h4>
+    <div class="icon-row">
+      <img src="VB.jpg" alt="Vb.net">
+      <img src="sql.png" alt="MySQL">
+    </div>
+  </div>
+
+</section>
+  
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("myAudio");
+  const icon = document.getElementById("audioIcon");
+  const title = document.getElementById("songTitle");
+  const wave = document.getElementById("wave");
+
+  let isPlaying = false;
+
+  icon.onclick = () => {
+    if (isPlaying) {
+      audio.pause();
+      title.classList.remove("show");
+      wave.classList.remove("active");
+    } else {
+      audio.play();
+      title.classList.add("show");
+      wave.classList.add("active");
+    }
+
+    isPlaying = !isPlaying;
+  };
+});
+</script>
+      </body>
+</head>
+</html>
