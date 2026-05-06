@@ -22,44 +22,65 @@
     <button><a href="diary.html">DIARY</a></button>
   </div>
 
-  <!-- GALLERY SECTION -->
+  <!-- GALLERY -->
   <h1 style="text-align:center;">Gallery</h1>
 
   <div class="gallery">
 
-    <div class="gallery-card small">
+    <div class="gallery-card">
+       
       <img src="Profilepic.jpg">
       <p>ME</p>
     </div>
 
-    <div class="gallery-card wide">
+    <div class="gallery-card">
       <img src="Kanyakan.jpg">
       <p>Kanyakan river</p>
     </div>
 
-    <div class="gallery-card tall">
+    <div class="gallery-card">
+      
       <img src="Cast.jpg">
-      <p>phillipine literature film cast</p>
+      <p>philippine literature film cast</p>
     </div>
 
-    <div class="gallery-card big">
+    <div class="gallery-card">
+      
       <img src="Exhibit.jpg">
       <p>Exhibit day 1</p>
     </div>
-       <div class="gallery-card big">
+
+    <div class="gallery-card">
+      
       <img src="ulap.jpg">
       <p>ulap</p>
     </div>
-       <div class="gallery-card big">
+
+    <div class="gallery-card">
+      
       <img src="arduinoy.jpg">
       <p>arduinoy</p>
     </div>
 
-    <div class="gallery-card big">
+    <div class="gallery-card"> 
+      
       <img src="bike.jpg">
       <p>Cycling</p>
     </div>
 
-    
+  </div>
+
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- SCRIPT -->
+  <script>
+document.querySelectorAll(".gallery-card").forEach(card => {
+  card.addEventListener("click", () => {
+    card.classList.toggle("expanded");
+  });
+});
+</script>
+
 </body>
 </html>
